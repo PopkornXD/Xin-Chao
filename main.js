@@ -69,5 +69,12 @@ function drink(){
     }
     for (var i in foodObj){
         foodObj[i].style = "display: none"
-    }   
+    }
+    
+    foodbutt.style = "background-color: transparent"
+    drinkbutt.style = "background-color: lightblue"
 }
+
+
+
+

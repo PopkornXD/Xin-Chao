@@ -60,4 +60,67 @@
                     dishes made with fresh ingredients and traditional spices.
                     Start with appetizers like crispy fried spring rolls,
                     refreshing summer rolls, or tempura scampi. Main courses
-                 
+                    include hearty noodle dishes such as Bun Cha Ha Noi with
+                    grilled pork, Bun Bo Hue with slow-cooked meats, and the
+                    crispy Banh Xeo pancake filled with scampi and pork. For a
+                    quick yet delicious option, try the classic Bánh Mì
+                    baguettes with chicken, beef, or omelet, all served with
+                    vibrant pickled vegetables and house-made sauces.
+                </p>
+               
+                <a class="underline mt-2" href="menu.html">View the menu</a>  <!-- LINK TO MENU -->
+            </div>
+        </div>
+        <center>
+            
+            <img class="mt-20 w-19/20" src="photos/the-food-delicious-tasty.jpg"> <!-- PICTURE 2 -->
+
+                                                                <!-- SOCIAL MEDIA -->
+            <h1 class="text-6xl mt-10 font-bold">FOLLOW US</h1>
+            <div class="flex flex-col text-2xl h-40 justify-evenly underline">
+                <a href="https://www.instagram.com/xinchao.oslo/">Instagram</a>
+                <a href="https://www.facebook.com/XinChaoRestauant/?locale=nb_NO">Facebook</a>
+            </div>
+
+            <!-- FOOTER -->
+            <img class="w-40 mt-20" src="photos/mereSymbol.png">
+            <hr class="w-8/11 border-1 border-dashed">
+
+            <div class="w-full h-20 mt-10 flex flex-row justify-evenly">
+                <a class="underline" href="tel:95223111">95 22 31 11</a>
+                <a class="underline"
+                    href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x46416f0da6c0726b:0x59ab1abd94dda9cb?sa=X&ved=1t:8290&ictx=111">Møllergata
+                    42, 0179 Oslo</a>
+            </div>
+
+        </center>
+
+        <script>
+
+            $("#scrollButton").click(function () {
+                $("html,body").animate(
+                    {
+                    scrollTop: $("#textElement").offset().top - 130,
+                    },
+                    "slow",
+                )
+            })
+                
+            
+
+            window.onscroll = function () {scrollFunction()};
+
+            scrlButton = document.getElementById("scrollButton")
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                  scrlButton.style.display = "none";
+                } else {
+                  scrlButton.style.display = "block";
+                }
+              }
+
+              
+        </script>
+    </body>
+</html>
