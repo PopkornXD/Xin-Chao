@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+            rel="stylesheet">
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>XinChào</title>
+        <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+
+        <style>
+        
+        a, p, h1, h2 {
+            font-family: "Funnel Sans", serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+        }
+    </style>
+    </head>
+    <body class="bg-white">
+        <center>
+            <!-- NAVIGATION BAR -->
+            <nav
+                class="fixed z-10 bg-white flex flex-row justify-evenly w-full h-30 text-2xl mt-0 top-0 border-b-2 font-semibold">
+
+                <a class="self-center w-[20vw] hover:underline"
+                    href="maps.html">HOURS AND LOCATION</a>
+                <a class="self-center hover:underline" href="menu.html">MENU</a>
+            </nav>
+
+            <div class="flex flex-col w:full md:w-1/2 mt-80">
+                <img src="photos/XinChaoStor.svg" alt>  <!-- LOGO -->
+                
+                <button id="scrollButton" class="cursor-pointer fixed bottom-0 self-center text-3xl">&#65088;</button> <!-- ARROW DOWN -->
+            </div>
+
+
+        </center>
+        <div
+            class="mt-[60vh] flex flex-col md:flex-row justify-evenly items-center"
+            id="textParent">
+            <div class="w-[90vw] h-[40vh] md:h-[80vh] md:w-[50vw]">
+                <img class="w-full h-full object-cover"
+                    src="photos/vietnamese-food-holding.png"> <!-- PICTURE 1 -->
+            </div>
+            
+            <div
+                class="w-[90vw] h-auto md:h-[80vh] md:w-[40vw] flex flex-col border-3 mt-10 md:mt-0 p-5"
+                id="textElement">
+                
+
+                <h1 class="text-3xl lg:text-5xl mt-5 font-bold">OUR MENU</h1>  <!-- MENU DESCRIPTION -->
+                <p class="mt-10 text-base lg:text-xl self-start">  
+                    We offer a diverse and flavorful menu featuring authentic
+                    dishes made with fresh ingredients and traditional spices.
+                    Start with appetizers like crispy fried spring rolls,
+                    refreshing summer rolls, or tempura scampi. Main courses
+                 

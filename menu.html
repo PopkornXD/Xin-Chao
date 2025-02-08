@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XinChào Menu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
+
+
+    <style>
+        a, p, h1, h2 {
+            font-family: "Funnel Sans", serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+        }
+
+        .slides {
+        display: none;
+        }
+
+        .active {
+        background-color: #717171;
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVIGATION BAR -->
+    <a href="index.html" class="w-28 z-10 fixed float-left top-0"><img src="photos/XinChaoLiten.png"></a>
+    <center>
+        <nav class="fixed bg-white flex flex-row sm:justify-evenly justify-end w-full h-30 text-xl sm:text-2xl mt-0 top-0 z-9 border-b-2 font-semibold">
+            
+            <a class="self-center w-[20vw] hover:underline" href="maps.html">HOURS AND LOCATION</a>
+            <a class="self-center ml-15 sm:ml-0 mr-5 sm:mr-0 underline" href="menu.html">MENU</a>
+        </nav>
+
+
+        <!-- PHOTO CAROUSEL -->
+        <div class="max-w-[90vw] relative mt-[150px]">
+            <div class="w-full h-full flex flex-row justify-center absolute shadow-black-2 drop-shadow-2xl" style="text-shadow: 1px 1px 20px black;">
+                <h1 class="z-2 text-white text-[10vw] self-center">MENU</h1>
+            </div>
+            
+            <div class="slides">
+                <div class="text-[#f2f2f2] text-[12px] p-[12px] absolute top-0">1 / 3</div>
+                <img  style="width:100%; height:75vh; object-fit:cover" src="photos/menuPho.jpeg"> <!-- First Picture -->
+            </div>
+          
+            <div class="slides">
+                <div class="text-[#f2f2f2] text-[12px] p-[12px] absolute top-0">2 / 3</div>
+                <img style="width:100%; height:75vh; object-fit:cover" src="photos/menuItem2.png"> <!-- Second Picture -->
+            </div>
+        
+            <div class="slides">
+                <div class="text-[#f2f2f2] text-[12px] p-[12px] absolute top-0">3 / 3</div>
+                <img style="width:100%; height:75vh; object-fit:cover" src="photos/banh-mi.png"> <!-- Third Picture -->
+            </div>
+            
+                <!-- NEXT/PREVIOUS PICTURE BUTTONS -->
+                <a class="cursor-pointer absolute top-1/2 w-auto mt-[-22px] p-[16px] text-white font-bold text-[18px] select-none left-0 hover:bg-black" style="transition: 0.6s ease;" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="cursor-pointer absolute top-1/2 w-auto mt-[-22px] p-[16px] text-white font-bold text-[18px] select-none right-0 hover:bg-black" style="transition: 0.6s ease;" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+            
+            <!-- DOTS UNDER CAROUSEL -->
+            <div style="text-align:center">
+              <span class="dot cursor-pointer h-[15px] w-[15px] mr-2 bg-[#bbb] rounded-[50%] hover:bg-[#717171]" style="transition: background-color 0.6s ease; display:inline-block" onclick="currentSlide(1)"></span>
+              <span class="dot cursor-pointer h-[15px] w-[15px] mr-2 bg-[#bbb] rounded-[50%] hover:bg-[#717171]" style="transition: background-color 0.6s ease; display:inline-block" onclick="currentSlide(2)"></span>
+              <span class="dot cursor-pointer h-[15px] w-[15px] bg-[#bbb] rounded-[50%] hover:bg-[#717171]" style="transition: background-color 0.6s ease; display:inline-block" onclick="currentSlide(3)"></span>
+            </div>
+
+            
+        </div>
+        <div class="flex flex-col"> <!-- ARROW DOWN -->
+            <button id="scrollButton" class="cursor-pointer fixed bottom-0 self-center text-3xl">&#65088;</button>
+        </div>
+        
+
+
+        <!-- FOOD/DRINK MENU BUTTONS -->
+        <div class="flex flex-row justify-center" id="textElement">
+            <button class="mr-20 p-2 border-2 cursor-pointer text-2xl" id="foodButton" onclick="food()">Food Menu</button>
+            <button class="ml-20 p-2 border-2 cursor-pointer text-2xl" id="drinkButton" onclick="drink()">Drink Menu</button>
+        </div>
+        <!-- WHERE TO ORDER -->
+        <h1 class="mt-10 text-2xl">Order at <a class="underline text-blue-300" href="tel:95223111">95 22 31 11</a> <br><br> Or <a class="underline text-blue-300" href="https://www.foodora.no/restaurant/rzy1/xin-chao-restaurant">Foodora</a></h1>
+    </center>
+        <!-- MENU -->
+        <div class="flex flex-row flex-wrap justify-evenly">
+            <!-- FOOD -->
+            <div class="food p-5 border-2 w-[90vw] md:w-[40vw] mt-15">    
+                <h1 class="text-3xl">Appetizers</h1> <!-- APPETIZERS -->
+                
+                <div class="flex flex-col items-start mt-15">
+                    <h2 class="text-2xl">Summer rolls w/ Scampi</h2>
+                    <p>
+                        2 pcs. summer rolls filled with scampi, egg, rice, noodles, salad, cucumber and herbs. Served with homemade hoisin sauce.
+                        <br>125kr
+
+                    </p>
+                </div>
+
+                <div class="flex flex-col items-start mt-15">
+                    <h2 class="text-2xl">Fried Spring Roll Chicken</h2>
+                    <p>
+                        2 pcs. fried spring rolls with chicken, glass noodles, black mushroom, carrot and herbs. Served with sweet chili sauce.
+                        <br>139kr
+                    </p>
+                </div>
+
+                <div class="flex flex-col items-start mt-15">
+                    <h2 class="text-2xl">Fried Spring Roll Vegetarian</h2>
+                    <p>
+                        2 pcs. fried spring rolls with tofu, glass noodles, black mushroom, carrot and herbs. Served with sweet chili sauce.
+                        <br>139kr
+                    </p>
+                </div>
+
+                <div class="flex flex-col items-start mt-15">
+                    <h2 class="text-2xl">Tempura Scampi</h2>
+                    <p>
+                        3 pieces baked scampi with sweet chilli sauce.
+                        <br>109kr
+                    </p>
+                </div>
+
+                <div class="flex flex-col items-start mt-15">
+                    <h2 class="text-2xl">Cha Thap Cam</h2>
+                    <p>
+                        Vietnamese sausage mix of scampi cake, chicken cake and pork sausages. Served with pickled vegetables.
+                        <br>169kr
+                    </p>
+                </div>
+            </div>
+
+            <div class="food p-5 border-2 w-[90vw] md:w-[40vw] mt-15">
+                <h1 class="text-3xl">Main Courses</h1> <!-- MAIN COURSES -->
+
+                <div class="flex flex-col items-start mt-15">
+                    <h2 class="text-2xl">Bun Cha Ha Noi</h2>
+                    <p>
+                        North Vietnamese dish with grilled pork, meatballs, vermicelli noodles, pickled carrot and radish, peanuts, salad and herbs. Served with the house sweet and sour chili fish sauce.
+                        <br>239kr
+                    </p>
+                </div>
+
+                <div class="flex flex-col items-start mt-15">
+                    <h2 class="text-2xl">Bun Bo Xao Cha Gio</h2>
+                    <p>
+                        Lemongrass and chilli marinated beef tenderloin with vermicelli noodles, bean sprouts, cucumber, onion, pickled carrot and radish, peanuts, salad and herbs. Served with house sweet and sour chilli fish sauce and chicken spring rolls.
+                        <br>239kr
+                    </p>
+                </div>
+
+                <div class="flex flex-col items-start mt-15">
+                    <h2 class="text-2xl">Bun Cha Tom Cha Gio</h2>
+                    <p>
+                        Vietnamese scampi cake with vermicelli noodles, bean sprouts, cucumber, onion, pickled carrot and radish, peanuts, salad and herbs. Served with house sweet and sour chilli fish sauce and chicken spring rolls.
+                        <br>239kr
+                    </p>
+                </div>
+
+                <div class="flex flex-col items-start mt-15">
+                    <h2 class="text-2xl">Bun Bo Hue</h2>
+                    <p>
+                        Umami long-cooked seasoning power of beef, chicken and pork. Served with vermicelli noodles, topped with long-braised beef, pork, Vietnamese chicken sausages and herbs.
+                        <br>229kr
+                    </p>
+                </div>
+
+                <div class="flex flex-col items-start mt-15">
+                    <h2 class="text-2xl">Banh Xeo</h2>
+                    <p>
+                        Vietnamese crispy rice pancakes filled with scampi, pork and bean sprouts. Served with salad, fresh herbs and sweet and sour chilli fish sauce dip.
+                        <br>239kr
+                    </p>
+                </div>
+            </div>
+
+            <div class="food p-5 border-2 w-[90vw] md:w-[40vw] mt-15">
+                <h1 class="text-3xl">Baguettes</h1> <!-- BAGUETTES -->
+
+                <div class="flex flex-col items-start mt-15">
+                    <h2 class="text-2xl">Bánh Mì Chicken</h2>
+                    <p>
+                        Vietnamese baguette with chicken, omelette, paté, butter, mayonnaise, pickled carrot and radish, coriander and cucumber. Served with the house sweet chili soy sauce.
+                        <br>139kr
+                    </p>
+                </div>
+
+                <div class="flex flex-col items-start mt-15">
+                    <h2 class="text-2xl">Bánh Mì Beef</h2>
+                    <p>
+                        Vietnamese baguette with long-braised beef, pickled carrot and radish, butter, mayonnaise, cucumber and coriander.
+                        <br>145kr
+                    </p>
+                </div>
+
+                <div class="flex flex-col items-start mt-15">
+                    <h2 class="text-2xl">Bánh Mì Omelette</h2>
+                    <p>
+                        Vietnamese baguette with grilled pork mayonnaise, pickled carrot and radish, cucumber and coriander. Served with the house sweet chili soy sauce.
+                        <br>145kr
+                    </p>
+                </div>
+            </div>
+
+
+                                            <!-- DRINKS -->
+
+            <div class="drink p-5 border-2 w-[90vw] md:w-[40vw] mt-15">
+                <h1 class="text-3xl">Soda</h1>
+
+                <div class="flex flex-col items-start mt-15">
+                    <h2 class="text-2xl">Solo</h2>
+                    <p>
+                        Done by one person alone; unaccompanied.
+                        <br>45kr
+                    </p>
+                </div>
+
+                <div class="flex flex-col items-start mt-15">
+                    <h2 class="text-2xl">Pepsi</h2>
+                    <p>
+                        A carbonated soft drink with a cola flavor.
+                        <br>45kr
+                    </p>
+                </div>
+
+                <div class="flex flex-col items-start mt-15">
+                    <h2 class="text-2xl">Pepsi Max</h2>
+                    <p>
+                        A low-calorie, sugar-free cola.
+                        <br>45kr
+                    </p>
+                </div>
+
+                <div class="flex flex-col items-start mt-15">
+                    <h2 class="text-2xl">7up Free</h2>
+                    <p>
+                        A lemonade style soft drink with no sugar.
+                        <br>45kr
+                    </p>
+                </div>
+
+
+            </div>     
+            
+            <div class="drink p-5 border-2 w-[90vw] md:w-[40vw] mt-15">
+                <h1 class="text-3xl">Other Drinks</h1>
+
+                <div class="flex flex-col items-start mt-15">
+                    <h2 class="text-2xl">Vietnamese Iced Coffee</h2>
+                    <p>
+                        A traditional vietnamese coffee recipe.
+                        <br>75kr
+                    </p>
+                </div>
+
+                <div class="flex flex-col items-start mt-15">
+                    <h2 class="text-2xl">Soda Chanh Duong Da</h2>
+                    <p>
+                        Carbonated lemonade.
+                        <br>79kr
+                    </p>
+                </div>
+
+                <div class="flex flex-col items-start mt-15">
+                    <h2 class="text-2xl">Apple Juice</h2>
+                    <p>
+                        Freshly pressed apples.
+                        <br>45kr
+                    </p>
+                </div>
+            </div>  
+            
+            
+
+        </div>
+
+        <center>
+            <!-- FOOTER -->
+            <img class="w-40 mt-20" src="photos/mereSymbol.png" alt="">     
+            <hr class="w-8/11 border-1 border-dashed">
+
+            <div class="w-full h-20 mt-10 flex flex-row justify-evenly">
+                <a class="underline" href="tel:95223111">95 22 31 11</a>
+                <a class="underline" href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x46416f0da6c0726b:0x59ab1abd94dda9cb?sa=X&ved=1t:8290&ictx=111">Møllergata 42, 0179 Oslo</a>
+            </div> 
+        </center>
+        
+
+    
+
+
+    <script src="main.js"></script>
+    <script>
+        $("#scrollButton").click(function () {
+            $("html,body").animate(
+                {
+                scrollTop: $("#textElement").offset().top - 130,
+                },
+                "slow",
+            )
+        })
+            
+    
+
+        window.onscroll = function () {scrollFunction()};
+
+        scrlButton = document.getElementById("scrollButton")
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+              scrlButton.style.display = "none";
+            } else {
+              scrlButton.style.display = "block";
+            }
+        }
+
+    </script>
+</body>
+</html>
